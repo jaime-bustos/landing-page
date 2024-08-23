@@ -61,7 +61,7 @@ export default function Home() {
 							</InlineCode>
 							<Heading
 								variant="display-strong-s">
-								Comprehensive.<br/> Responsive.<br/>Accessible.
+								AI Engineer.<br/>Data Scientist.<br/>Python Dev.
 							</Heading>
 							<Button
 								href="https://once-ui.com/docs"
