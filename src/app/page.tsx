@@ -124,9 +124,9 @@ export default function Home() {
 						GitHub
 					</Button>
 					<Button
-						href="https://discord.com/invite/5EyAQ4eNdS"
+						href="https://www.linkedin.com/in/jaimebustosjr/"
 						prefixIcon="discord" size="s" variant="tertiary">
-						Discord
+						LinkedIn
 					</Button>
 				</Flex>
 			</Flex>
