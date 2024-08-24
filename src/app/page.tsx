@@ -8,18 +8,18 @@ import Link from 'next/link';
 export default function Home() {
 	const links = [
 		{
-			href: "https://once-ui.com/docs/theming",
-			title: "Themes",
+			href: "./app/projects/page.tsx",
+			title: "About",
 			description: "Style your app in minutes.",
 		},
 		{
-			href: "https://once-ui.com/docs/flexComponent",
-			title: "Layout",
+			href: "./app/projects/page.tsx",
+			title: "Projects",
 			description: "Build responsive layouts.",
 		},
 		{
-			href: "https://once-ui.com/docs/typography",
-			title: "Typography",
+			href: "",
+			title: "Resume",
 			description: "Scale text automatically.",
 		},
 	];
@@ -61,7 +61,7 @@ export default function Home() {
 							</InlineCode>
 							<Heading
 								variant="display-strong-s">
-								Comprehensive.<br/> Responsive.<br/>Accessible.
+								AI Engineer.<br/>Data Scientist.<br/>Python Dev.
 							</Heading>
 							<Button
 								href="https://once-ui.com/docs"
@@ -124,9 +124,9 @@ export default function Home() {
 						GitHub
 					</Button>
 					<Button
-						href="https://discord.com/invite/5EyAQ4eNdS"
+						href="https://www.linkedin.com/in/jaimebustosjr/"
 						prefixIcon="discord" size="s" variant="tertiary">
-						Discord
+						LinkedIn
 					</Button>
 				</Flex>
 			</Flex>
