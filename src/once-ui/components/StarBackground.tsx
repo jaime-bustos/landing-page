@@ -7,7 +7,7 @@ const StarBackground = () => {
     const canvas = canvasRef.current;
     const ctx = canvas?.getContext('2d');
     const stars: { x: number; y: number; size: number; dx: number; dy: number }[] = [];
-    const numStars = 200;
+    const numStars = 500;
 
     if (canvas && ctx) {
       canvas.width = window.innerWidth;
