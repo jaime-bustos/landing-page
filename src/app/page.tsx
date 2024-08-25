@@ -5,22 +5,30 @@ import React from 'react';
 import { Heading, Text, Flex, Button, Grid, Icon, InlineCode, Logo, Background } from '@/once-ui/components';
 import Link from 'next/link';
 
+import dynamic from 'next/dynamic';
+
+// Dynamically import the StarBackground component, disabling SSR
+const StarBackground = dynamic(() => import('../once-ui/components/StarBackground'), {
+  ssr: false,
+});
+
+
 export default function Home() {
 	const links = [
 		{
 			href: "./app/projects/page.tsx",
 			title: "About",
-			description: "Style your app in minutes.",
+			description: "Know my story.",
 		},
 		{
-			href: "./app/projects/page.tsx",
+			href: "/projects",
 			title: "Projects",
-			description: "Build responsive layouts.",
+			description: "See all my recent projects.",
 		},
 		{
 			href: "",
 			title: "Resume",
-			description: "Scale text automatically.",
+			description: "Check out my resume.",
 		},
 	];
 
@@ -28,8 +36,7 @@ export default function Home() {
 		<Flex
 			fillWidth paddingTop="l" paddingX="l"
 			direction="column" alignItems="center" flex={1}>
-			<Background
-				dots={false}/>
+			<StarBackground/>
 			<Flex
 				position="relative"
 				as="section" overflow="hidden"
@@ -44,30 +51,24 @@ export default function Home() {
 						fillWidth gap="24">
 						<Flex
 							position="relative"
-							fillWidth paddingTop="56" paddingX="xl">
-							<Logo size="xl" icon={false} style={{zIndex: '1'}}/>
+							fillWidth paddingTop="56" paddingX="l">
+							<Heading variant="display-strong-s">
+								Jaime Bustos
+							</Heading>
 						</Flex>
 						<Flex
 							position="relative"
 							fillWidth gap="24" marginBottom="104"
 							direction="column">
-							<InlineCode
-								className="shadow-m"
-								style={{
-									width: 'fit-content',
-									padding: 'var(--static-space-8) var(--static-space-16)',
-									backdropFilter: 'blur(var(--static-space-1))'}}>
-								Start by editing <span className="brand-on-background-medium">app/page.tsx</span>
-							</InlineCode>
 							<Heading
 								variant="display-strong-s">
 								AI Engineer.<br/>Data Scientist.<br/>Python Dev.
 							</Heading>
 							<Button
-								href="https://once-ui.com/docs"
+								href="/projects"
 								suffixIcon="chevronRight"
 								variant="secondary">
-								Read docs
+								Portfolio
 							</Button>
 						</Flex>
 					</Flex>
@@ -114,18 +115,18 @@ export default function Home() {
 				justifyContent="space-between">
 				<Text
 					variant="body-default-s" onBackground="neutral-weak">
-					© 2024 Once UI, <Link href="https://github.com/once-ui-system/nextjs-starter?tab=MIT-1-ov-file">MIT License</Link>
+					2024 Jaime Bustos
 				</Text>
 				<Flex
 					gap="12">
 					<Button
-						href="https://github.com/once-ui-system/nextjs-starter"
+						href="https://github.com/jaime-bustos"
 						prefixIcon="github" size="s" variant="tertiary">
 						GitHub
 					</Button>
 					<Button
 						href="https://www.linkedin.com/in/jaimebustosjr/"
-						prefixIcon="discord" size="s" variant="tertiary">
+						prefixIcon="linkedin" size="s" variant="tertiary">
 						LinkedIn
 					</Button>
 				</Flex>
