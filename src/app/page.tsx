@@ -16,17 +16,17 @@ const StarBackground = dynamic(() => import('../once-ui/components/StarBackgroun
 export default function Home() {
 	const links = [
 		{
-			href: "./app/projects/page.tsx",
+			href: "#about",
 			title: "About",
 			description: "Know my story.",
 		},
 		{
-			href: "/projects",
+			href: "#projects",
 			title: "Projects",
 			description: "See all my recent projects.",
 		},
 		{
-			href: "",
+			href: "https://drive.google.com/file/d/1Sni1FwtDeNEUZ1DqIJQdzbV5iIa4gK1a/view?usp=sharing",
 			title: "Resume",
 			description: "Check out my resume.",
 		},
@@ -72,6 +72,7 @@ export default function Home() {
 							</Button>
 						</Flex>
 					</Flex>
+
 					<Grid
 						radius="l"
 						border="neutral-medium"
@@ -108,6 +109,7 @@ export default function Home() {
 					</Grid>
 				</Flex>
 			</Flex>
+			
 			<Flex
 				as="footer"
 				position="relative"
