@@ -35,12 +35,12 @@ const ProjectsPage = () => {
         fillWidth minHeight="0" maxWidth={64}
         direction="column" alignItems="center" flex={1}>
         
-        <Heading variant="display-strong-s" marginBottom="xl">
+        <Heading variant="display-strong-s" marginBottom="m">
           Projects
         </Heading>
 
         <Grid
-          columns="repeat(3, 1fr)"
+          columns="repeat(1, 1fr)"
           tabletColumns="1col"
           mobileColumns="1col"
           fillWidth gap="l"
@@ -48,18 +48,18 @@ const ProjectsPage = () => {
           border="neutral-medium"
           //borderStyle="solid-1"
           padding="l"
-          style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)', borderRadius: '12px' }}>
+          style={{ backgroundColor: 'rgba(0, 0, 0, 0)', borderRadius: '12px' }}>
           {projects.map((project, index) => (
             <Flex
               key={index}
               direction="column" justifyContent="space-between"
               padding="l"
               gap="m"
-              style={{ backgroundColor: 'rgba(255, 255, 255, 0.4)', borderRadius: '8px' }}>
-              <Heading variant="body-strong-m">
+              style={{ backgroundColor: 'rgba(255, 255, 255, 1)', borderRadius: '8px' }}>
+              <Heading variant="body-strong-m" style={{color: 'black'}}>
                 {project.title}
               </Heading>
-              <Text variant="body-default-s" onBackground="neutral-weak">
+              <Text variant="body-default-s" onBackground="neutral-weak" style={{color: 'black'}}>
                 {project.description}
               </Text>
               <Button
