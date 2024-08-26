@@ -7,7 +7,6 @@ import Link from 'next/link';
 
 import dynamic from 'next/dynamic';
 
-// Dynamically import the StarBackground component, disabling SSR
 const StarBackground = dynamic(() => import('../once-ui/components/StarBackground'), {
   ssr: false,
 });
@@ -21,7 +20,7 @@ export default function Home() {
 			description: "Know my story.",
 		},
 		{
-			href: "#projects",
+			href: "/projects",
 			title: "Projects",
 			description: "See all my recent projects.",
 		},
