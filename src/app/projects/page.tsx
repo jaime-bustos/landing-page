@@ -6,18 +6,24 @@ import StarBackground from '../../once-ui/components/StarBackground';
 
 const projects = [
   {
-    title: 'GDP and Carbon Emmissions Reinforcment Learning',
-    description: 'A brief description of project one.',
-    link: '#',
+    title: 'GDP and Carbon Emissions Reinforcement Learning',
+    description: 
+      '• Simulated specific government policies and costs to find ways to lower global CO2 levels while maintaining high long-term GDP growth using policy-based reinforcement learning in OpenAI’s Gym library.\n' +
+      '• Implemented and visualized linear and polynomial regression to predict future CO2 and GDP growth using Pandas, Matplotlib, and scikit-learn.\n' +
+      '• Discovered that projected long-term GDP growth can stay positive with the correct CO2 policies; however, the tradeoff is a slight decline in the overall growth rate from 2% to around -1%, indicating a negative growth rate in 100 years.',
+    link: 'https://drive.google.com/file/d/1JOn780qTTXDyJ4wY_J5RLlTU8pEwgzTO/view?usp=sharing',
   },
+
   {
     title: 'A* Path Visualization',
-    description: 'A brief description of project two.',
-    link: '#',
+    description:
+    "• Developed an interactive visual representation of the A* pathfinding algorithm, enabling users to visually plot a start and end point on a grid and observe the algorithm's real-time pathfinding process.\n"+
+    "• Employed data structures like Priority Queues for maintaining open nodes in the pathfinding process, optimizing the algorithm's performance.",
+    link: 'https://github.com/jaime-bustos/a-star-pathfinding',
   },
   {
     title: 'Malaria Disease Detection in Cells using CNNs',
-    description: 'A brief description of project three.',
+    description: 'TBA',
     link: '#',
   },
 
@@ -59,7 +65,10 @@ const ProjectsPage = () => {
               <Heading variant="body-strong-m" style={{color: 'black'}}>
                 {project.title}
               </Heading>
-              <Text variant="body-default-s" onBackground="neutral-weak" style={{color: 'black'}}>
+              <Text 
+                variant="body-default-s" 
+                onBackground="neutral-weak" 
+                style={{color: 'black', whiteSpace: 'pre-line'}}>
                 {project.description}
               </Text>
               <Button
