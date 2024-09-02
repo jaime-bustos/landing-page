@@ -15,7 +15,7 @@ const StarBackground = dynamic(() => import('../once-ui/components/StarBackgroun
 export default function Home() {
 	const links = [
 		{
-			href: "#about",
+			href: "/about",
 			title: "About",
 			description: "Know my story.",
 		},
@@ -25,7 +25,7 @@ export default function Home() {
 			description: "See all my recent projects.",
 		},
 		{
-			href: "https://drive.google.com/file/d/1Sni1FwtDeNEUZ1DqIJQdzbV5iIa4gK1a/view?usp=sharing",
+			href: "https://drive.google.com/file/d/1eRRWu4QdaVpmM304vaurv71LOu6Mo_8y/view?usp=sharing",
 			title: "Resume",
 			description: "Check out my resume.",
 		},
