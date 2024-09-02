@@ -82,7 +82,6 @@ export default function Home() {
 						fillWidth>
 						{links.map((link) => (
 							<Link
-								target="_blank"
 								style={{ padding: 'var(--responsive-space-l)' }}
 								key={link.href}
 								href={link.href}>
@@ -96,7 +95,7 @@ export default function Home() {
 											variant="body-strong-m" onBackground="neutral-strong">
 											{link.title}
 										</Text>
-										<Icon size="s" name="arrowUpRight" />
+										<Icon size="s" name="chevronRight" />
 									</Flex>
 									<Text
 										variant="body-default-s" onBackground="neutral-weak">
