@@ -25,7 +25,7 @@ const projects = [
     title: 'Malaria Disease Detection in Cells using CNNs',
     description:
     "• Developed a supervised learning computer vision model that detected diseased cells using Keras in TensorFlow.\n"+
-    "• CNN model was trained on over hudreds of cell images using a validation split to determine what to look for.\n" +
+    "• CNN model was trained on over hundreds of cell images using a validation split to determine what to look for.\n" +
     "• Employed various types of hyperparemeter tuning (pooling size, Kernel size, epoch size) through hyperparameter testing.", 
     link: 'https://drive.google.com/file/d/1SnISeNGu2kr1uFhVU2Z34zfrgnY2XZZr/view?usp=sharing',
   },
