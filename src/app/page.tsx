@@ -25,7 +25,7 @@ export default function Home() {
 			description: "See all my recent projects.",
 		},
 		{
-			href: "https://drive.google.com/file/d/1eRRWu4QdaVpmM304vaurv71LOu6Mo_8y/view?usp=sharing",
+			href: "https://drive.google.com/file/d/1TDtYdWAC9h1CeYYfzFCD-0i3d0eJ36MM/view?usp=sharing",
 			title: "Resume",
 			description: "Check out my resume.",
 		},
