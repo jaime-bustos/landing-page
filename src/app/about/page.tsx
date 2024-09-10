@@ -56,10 +56,10 @@ const AboutMe = () => {
         >
           <Text style={{ textAlign: 'left', color: 'black', paddingRight: '20px'}}>
             <b>Languages</b>: Python, R, C++, C, Java<br />
-            <br /><b>Tools</b>: GitHub, Pandas, Numpy, Keras, Seaborn, Matplotlib, SaTScan, Jupyter, scikit-learn, STATA, Microsoft Office
+            <br /><b>Tools</b>: Git, Pandas, Numpy, Keras, Seaborn, Matplotlib, SaTScan, Jupyter, scikit-learn, STATA, Microsoft Office
           </Text>
           <Text style={{ textAlign: 'left', color: 'black' }}>
-            <b>Interests</b>: Astrononmy, Astrophysics, AI Development, AI Engineering, AI Research, Computational Engineering<br />
+            <b>Interests</b>: Astronomy, Astrophysics, AI Development, AI Engineering, AI Research, Computational Engineering<br />
             <br /><b>Skills</b>: ML Models, DNN Models, Econometric Data Analysis, Web Scraping, Exploraratory Data Analysis
           </Text>
         </Flex>
