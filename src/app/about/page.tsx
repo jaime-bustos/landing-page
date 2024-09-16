@@ -32,6 +32,12 @@ const AboutMe = () => {
         }}
       >
         <Button
+          href="./"
+          suffixIcon="chevronRight"
+          variant="secondary">
+          Home
+        </Button>
+        <Button
           href="/projects"
           suffixIcon="chevronRight"
           variant="secondary">
