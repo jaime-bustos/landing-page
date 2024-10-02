@@ -1,5 +1,6 @@
 import "@/once-ui/styles/index.scss";
 import "@/once-ui/tokens/index.scss";
+import { Analytics } from "@vercel/analytics/react"
 
 import { Flex } from '@/once-ui/components'
 import classNames from 'classnames';
