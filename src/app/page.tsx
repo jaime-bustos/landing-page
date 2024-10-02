@@ -61,7 +61,7 @@ export default function Home() {
 							direction="column">
 							<Heading
 								variant="display-strong-s">
-								AI Engineer.<br/>Data Scientist.<br/>Python Dev.
+								Data Analyst.<br/>AI Engineer.<br/>Python Dev.
 							</Heading>
 							<Button
 								href="/projects"
