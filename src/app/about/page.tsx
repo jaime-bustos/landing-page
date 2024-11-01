@@ -34,7 +34,9 @@ const AboutMe = () => {
         <Button
           href="./"
           suffixIcon="chevronRight"
-          variant="secondary">
+          variant="secondary"
+          style={{ marginBottom: '10px' }}
+          >
           Home
         </Button>
         <Button

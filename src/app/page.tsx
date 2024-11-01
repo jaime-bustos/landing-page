@@ -39,7 +39,7 @@ export default function Home() {
 			<Flex
 				position="relative"
 				as="section" overflow="hidden"
-				fillWidth minHeight="0" maxWidth={64}
+				fillWidth minHeight="0" maxWidth={85}
 				direction="column" alignItems="center" flex={1}>
 				<Flex
 					as="main"
@@ -57,11 +57,15 @@ export default function Home() {
 						</Flex>
 						<Flex
 							position="relative"
-							fillWidth gap="24" marginBottom="104"
-							direction="column">
+							fillWidth
+							gap="24"
+							marginBottom="104"
+							direction="column"
+							// style={{ marginLeft: '200px' }} 
+							>
 							<Heading
-								variant="display-strong-s">
-								Data Analyst.<br/>AI Engineer.<br/>Python Dev.
+								variant="display-strong-s" style={{ fontSize: "35px", lineHeight: '1.5', textAlign: 'left' }}>
+								AI and Computational Science.<br/>Data Analyst.<br/>Advancing Humanity with AI.
 							</Heading>
 							<Button
 								href="/projects"

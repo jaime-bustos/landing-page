@@ -48,6 +48,27 @@ const ProjectsPage = () => {
           Projects
         </Heading>
 
+        <Flex
+          direction="column" alignItems="center" flex={1}
+        >
+          <Button
+            href="../"
+            suffixIcon="chevronRight"
+            variant="secondary"
+            style={{marginBottom:"10px"}}
+            >
+            Home
+          </Button>
+
+          <Button
+            href="../about"
+            suffixIcon="chevronRight"
+            variant="secondary">
+            About Me
+          </Button>
+        </Flex>
+          
+
         <Grid
           columns="repeat(1, 1fr)"
           tabletColumns="1col"
