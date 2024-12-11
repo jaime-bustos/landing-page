@@ -46,7 +46,7 @@ const AboutMe = () => {
           Portfolio
         </Button>
         <img
-          src="https://media.licdn.com/dms/image/v2/D5603AQGrhP2ppUZqyQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1673057401650?e=1730937600&v=beta&t=CrBYf7MvaIQ8hbgSDW2UfnzPSHvnzh6IJBLJHvB4jjs"
+          src="https://media.licdn.com/dms/image/v2/D5603AQGrhP2ppUZqyQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1673057401650?e=1739404800&v=beta&t=3EveEddnEv_ccmq1jelD0ji7kQe6jLr1Q3VBuK-CmIA"
           alt="Your Picture"
           style={{ width: '150px', height: '150px', borderRadius: '50%', marginBottom: '20px', alignSelf: 'center'}}
         />
