@@ -6,6 +6,13 @@ import StarBackground from '../../once-ui/components/StarBackground';
 
 const projects = [
   {
+    title: 'Check out all my projects on my GitHub!',
+    description: 'The projects on my website are only a few of the many projects I have worked on. Check out my GitHub for more!',
+    link: 'https://github.com/jaime-bustos',
+
+  },
+
+  {
     title: 'GDP and Carbon Emissions Reinforcement Learning',
     description: 
       '• Simulated specific government policies and costs to find ways to lower global CO2 levels while maintaining high long-term GDP growth using policy-based reinforcement learning in OpenAI’s Gym library.\n' +
@@ -80,28 +87,38 @@ const ProjectsPage = () => {
           padding="l"
           style={{ backgroundColor: 'rgba(0, 0, 0, 0)', borderRadius: '12px' }}>
           {projects.map((project, index) => (
-            <Flex
-              key={index}
-              direction="column" justifyContent="space-between"
-              padding="l"
-              gap="m"
-              style={{ backgroundColor: 'rgba(255, 255, 255, 1)', borderRadius: '8px' }}>
-              <Heading variant="body-strong-m" style={{color: 'black'}}>
-                {project.title}
-              </Heading>
-              <Text 
-                variant="body-default-s" 
-                onBackground="neutral-weak" 
-                style={{color: 'black', whiteSpace: 'pre-line'}}>
-                {project.description}
-              </Text>
-              <Button
-                href={project.link}
-                suffixIcon="chevronRight"
-                variant="secondary">
-                View Project
-              </Button>
-            </Flex>
+            <React.Fragment key={index}>
+              <Flex
+                direction="column" justifyContent="space-between"
+                padding="l"
+                gap="m"
+                style={{ backgroundColor: 'rgba(255, 255, 255, 1)', borderRadius: '8px' }}>
+                <Heading variant="body-strong-m" style={{color: 'black'}}>
+                  {project.title}
+                </Heading>
+                <Text 
+                  variant="body-default-s" 
+                  onBackground="neutral-weak" 
+                  style={{color: 'black', whiteSpace: 'pre-line'}}>
+                  {project.description}
+                </Text>
+                <Button
+                  href={project.link}
+                  suffixIcon="chevronRight"
+                  variant="secondary">
+                  {project.title === 'Check out all my projects on my GitHub!' ? 'Link to GitHub' : 'View Project'}
+                </Button>
+              </Flex>
+              {index === 0 && (
+                <hr style={{ 
+                  width: '100%', 
+                  border: 'none', 
+                  height: '2px', 
+                  backgroundColor: 'rgba(255, 255, 255, 0.2)', 
+                  margin: '20px 0' 
+                }} />
+              )}
+            </React.Fragment>
           ))}
         </Grid>
       </Flex>
