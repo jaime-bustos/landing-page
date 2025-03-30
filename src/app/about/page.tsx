@@ -50,8 +50,8 @@ const AboutMe = () => {
           alt="Your Picture"
           style={{ width: '150px', height: '150px', borderRadius: '50%', marginBottom: '20px', alignSelf: 'center'}}
         />
-        <Heading style={{ color: 'black' }}>Jaime Bustos</Heading>
-        <Heading style={{ color: 'black', fontSizeAdjust: '0.35', padding: '20px'}}>B.S. Computer Science, Business Economics</Heading>
+        <Heading style={{ color: 'black' }}>⚠️ Thanks for stopping by, but this page is under construction! 👷</Heading>
+        {/* <Heading style={{ color: 'black', fontSizeAdjust: '0.35', padding: '20px'}}>B.S. Computer Science, Business Economics</Heading> */}
         <Flex
           direction="row"
           style={{
@@ -62,17 +62,19 @@ const AboutMe = () => {
             fontSize: '15px'
           }}
         >
-          <Text style={{ textAlign: 'left', color: 'black', paddingRight: '20px'}}>
+        
+
+          {/* <Text style={{ textAlign: 'left', color: 'black', paddingRight: '20px'}}>
             <b>Languages</b>: Python, R, C++, C, Java<br />
             <br /><b>Tools</b>: Git, Pandas, Numpy, Keras, Seaborn, Matplotlib, SaTScan, Jupyter, scikit-learn, STATA, Microsoft Office
           </Text>
           <Text style={{ textAlign: 'left', color: 'black' }}>
             <b>Interests</b>: Astronomy, Astrophysics, AI Development, AI Engineering, AI Research, Computational Engineering<br />
             <br /><b>Skills</b>: ML Models, DNN Models, Econometric Data Analysis, Web Scraping, Exploraratory Data Analysis
-          </Text>
+          </Text> */}
         </Flex>
         
-        <Text style={{ color: 'black', marginTop: '20px'}}>
+        {/* <Text style={{ color: 'black', marginTop: '20px'}}>
           I'm currently in my last year at Wofford College studying computer science and business economics. <br />
           <br />
           I aim to be ambitious in all my work. I see challenges as opportunities and ways to grow. No matter what kind of project I'm working on,
@@ -83,7 +85,7 @@ const AboutMe = () => {
             I believe in making a positive impact in my job. With AI engineering, I believe this is one of the best ways I can contribute
             to this goal. <br />
 
-        </Text>
+        </Text> */}
       </Flex>
       <Flex
 					gap="12" 

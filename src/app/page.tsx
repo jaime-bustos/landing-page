@@ -60,10 +60,11 @@ export default function Home() {
 						fillWidth gap="0">
 						<Flex
 							position="relative"
-							fillWidth paddingTop="56" paddingX="l"
+							paddingTop="56" paddingX="l"
     						direction="column" gap="20">
 
-							<Heading variant="display-strong-s" style={{ fontSize: "30px", lineHeight: '1.2', textAlign: 'left' }}>
+							
+							<Heading variant="display-strong-s" style={{ fontSize: "30px", lineHeight: '1.2', textAlign: 'left', whiteSpace: "nowrap"}}>
 								Jaime Bustos
 							</Heading>
 							<Heading
