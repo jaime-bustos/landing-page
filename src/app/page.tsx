@@ -29,7 +29,7 @@ export default function Home() {
 			description: "see all my projects",
 		},
 		{
-			href: "https://drive.google.com/file/d/1TDtYdWAC9h1CeYYfzFCD-0i3d0eJ36MM/view?usp=sharing",
+			href: "https://drive.google.com/file/d/1N1LpNE6SvVQZS0R782ur18InKVNn5G9i/view?usp=sharing",
 			title: "resume",
 			description: "check out my resume",
 		},
