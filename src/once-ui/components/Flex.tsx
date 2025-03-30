@@ -64,12 +64,12 @@ const Flex = forwardRef<HTMLDivElement, ComponentProps>(({
     radius,
     overflowX,
     overflowY,
-    zIndex,
-    shadow,
-    className,
-    style,
-    children,
-    ...rest
+        zIndex,
+        shadow,
+        className,
+        style,
+        children,
+        ...rest
 }, ref) => {
     const generateClassName = (prefix: string, token: SpacingToken | undefined) => {
         return token ? `${prefix}-${token}` : undefined;

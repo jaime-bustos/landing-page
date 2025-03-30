@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-import { Heading, Text, Flex, Button, Grid, Icon, InlineCode, Logo, Background } from '@/once-ui/components';
+import { Heading, Text, Flex, Button, Grid, Icon, InlineCode, Logo, Background} from '@/once-ui/components';
 import Link from 'next/link';
 
 import dynamic from 'next/dynamic';
@@ -11,18 +11,22 @@ const StarBackground = dynamic(() => import('../once-ui/components/StarBackgroun
   ssr: false,
 });
 
+const Footer = dynamic(() => import('../once-ui/components/Footer'), {
+	ssr: false,
+  });
+
 
 export default function Home() {
 	const links = [
 		{
 			href: "/about",
-			title: "About",
-			description: "Know my story.",
+			title: "Feed",
+			description: "All my posts and updates.",
 		},
 		{
 			href: "/projects",
-			title: "Projects",
-			description: "See all my recent projects.",
+			title: "Portfolio",
+			description: "See all my projects.",
 		},
 		{
 			href: "https://drive.google.com/file/d/1TDtYdWAC9h1CeYYfzFCD-0i3d0eJ36MM/view?usp=sharing",
@@ -39,61 +43,52 @@ export default function Home() {
 			<Flex
 				position="relative"
 				as="section" overflow="hidden"
-				fillWidth minHeight="0" maxWidth={85}
-				direction="column" alignItems="center" flex={1}>
+				fillWidth minHeight="0" maxWidth={40}
+				direction="column" alignItems="center" flex={1}	>
 				<Flex
 					as="main"
 					direction="column" justifyContent="center"
-					fillWidth fillHeight padding="l" gap="l">
+					padding="l" gap="l"
+					border="neutral-medium"
+					borderStyle="solid-1"
+					radius="xl"
+					style={{ backgroundColor: "#0d0d0d" }}
+
+					>
 					<Flex
 						mobileDirection="column"
-						fillWidth gap="24">
+						fillWidth gap="0">
 						<Flex
 							position="relative"
-							fillWidth paddingTop="56" paddingX="l">
-							<Heading variant="display-strong-s">
+							fillWidth paddingTop="56" paddingX="l"
+    						direction="column" gap="20">
+
+							<Heading variant="display-strong-s" style={{ fontSize: "30px", lineHeight: '1.2', textAlign: 'left' }}>
 								Jaime Bustos
 							</Heading>
-						</Flex>
-						<Flex
-							position="relative"
-							fillWidth
-							gap="24"
-							marginBottom="104"
-							direction="column"
-							// style={{ marginLeft: '200px' }} 
-							>
 							<Heading
-								variant="display-strong-s" style={{ fontSize: "35px", lineHeight: '1.5', textAlign: 'left' }}>
-								AI and Computational Science.<br/>Data Analyst.<br/>Advancing Humanity with AI.
+								variant="display-strong-s" style={{ fontSize: "15px", lineHeight: '1.5', textAlign: 'left' }}>
+								data analyst.<br/>developer.<br/>ai engineer.
 							</Heading>
-							<Button
-								href="/projects"
-								suffixIcon="chevronRight"
-								variant="secondary">
-								Portfolio
-							</Button>
 						</Flex>
-					</Flex>
 
-					<Grid
-						radius="l"
-						border="neutral-medium"
-						borderStyle="solid-1"
-						columns="repeat(3, 1fr)"
+
+						<Grid
+						rows="repeat(3, 1fr)"
 						tabletColumns="1col"
 						mobileColumns="1col"
-						fillWidth>
+						fillWidth
+						gap="xs">
 						{links.map((link) => (
 							<Link
-								style={{ padding: 'var(--responsive-space-l)' }}
+
 								key={link.href}
 								href={link.href}>
 								<Flex
-									fillWidth paddingY="8" gap="8"
+									fillWidth padding="20" gap="1"
 									direction="column">
 									<Flex
-										fillWidth gap="12"
+										fillWidth gap="1"
 										alignItems="center">
 										<Text
 											variant="body-strong-m" onBackground="neutral-strong">
@@ -109,32 +104,15 @@ export default function Home() {
 							</Link>
 						))}
 					</Grid>
+					
+					</Flex>
+
+					
 				</Flex>
+				<Footer/>
 			</Flex>
 			
-			<Flex
-				as="footer"
-				position="relative"
-				fillWidth paddingX="l" paddingY="m"
-				justifyContent="space-between">
-				<Text
-					variant="body-default-s" onBackground="neutral-weak">
-					2024 Jaime Bustos
-				</Text>
-				<Flex
-					gap="12">
-					<Button
-						href="https://github.com/jaime-bustos"
-						prefixIcon="github" size="s" variant="tertiary">
-						GitHub
-					</Button>
-					<Button
-						href="https://www.linkedin.com/in/jaimebustosjr/"
-						prefixIcon="linkedin" size="s" variant="tertiary">
-						LinkedIn
-					</Button>
-				</Flex>
-			</Flex>
+			
 		</Flex>
 	);
 }
