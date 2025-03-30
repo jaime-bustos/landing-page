@@ -3,7 +3,7 @@ import { useEffect, useRef } from 'react';
 const StarBackground = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const starsRef = useRef<{ x: number; y: number; z: number; size: number }[]>([]);
-  const numStars = 600;
+  const numStars = 500;
   let distX = 0;
   let distY = 0;
 
@@ -49,7 +49,7 @@ const StarBackground = () => {
               ctx.beginPath();
               ctx.moveTo(stars[i].x, stars[i].y);
               ctx.lineTo(stars[j].x, stars[j].y);
-              ctx.strokeStyle = `rgba(255, 255, 255, ${opacity * 0.5})`; // Soft white lines
+              ctx.strokeStyle = `rgba(255, 255, 255, ${opacity * 0.2})`; // Soft white lines
               ctx.lineWidth = 0.5;
               ctx.stroke();
             }
@@ -81,8 +81,8 @@ const StarBackground = () => {
       };
 
       const handleMouseMove = (e: MouseEvent) => {
-        distX = (e.clientX - canvas.width / 2) * 0.009; // Increase the factor for visible movement
-        distY = (e.clientY - canvas.height / 2) * 0.009; // Increase the factor for visible movement
+        distX = (e.clientX - canvas.width / 2) * 0.0035; // Increase the factor for visible movement
+        distY = (e.clientY - canvas.height / 2) * 0.0035; // Increase the factor for visible movement
       };
 
       window.addEventListener('mousemove', handleMouseMove);

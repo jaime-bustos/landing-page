@@ -66,7 +66,8 @@ export default function Home() {
 						<Flex
 							position="relative"
 							paddingTop="m" paddingX="l"
-    						direction="column" gap="20">
+    						direction="column" gap="20"
+							justifyContent='center'>
 
 							
 							<Heading variant="display-strong-s" style={{ fontSize: "30px", lineHeight: '1.2', textAlign: 'left', whiteSpace: "nowrap"}}>
@@ -74,7 +75,7 @@ export default function Home() {
 							</Heading>
 							<Heading
 								variant="display-strong-s" style={{ fontSize: "15px", lineHeight: '1.5', textAlign: 'left' }}>
-								data analyst.<br/>developer.<br/>ai engineer.
+								data analyst.<br/>developer.<br/>ML engineer.<br/>futurist.
 							</Heading>
 						</Flex>
 

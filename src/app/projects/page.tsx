@@ -1,129 +1,118 @@
-"use client";
+  "use client";
 
-import React from 'react';
-import { Flex, Grid, Heading, Text, Button } from '@/once-ui/components';
-import StarBackground from '../../once-ui/components/StarBackground';
+  import React from 'react';
+  import { Flex, Grid, Heading, Text, Button } from '@/once-ui/components';
+  import StarBackground from '../../once-ui/components/StarBackground';
 
-const projects = [
-  {
-    title: 'Check out all my projects on my GitHub!',
-    description: 'The projects on my website are only a few of the many projects I have worked on. Check out my GitHub for more!',
-    link: 'https://github.com/jaime-bustos',
+  const projects = [
+    {
+      title: 'Check out all my projects on my GitHub!',
+      description: 'The projects on my website are only a few of the many projects I have worked on. Check out my GitHub for more!',
+      link: 'https://github.com/jaime-bustos',
+    },
+    {
+      title: 'GDP and Carbon Emissions Reinforcement Learning',
+      description:
+        `• Simulated government policy to reduce CO2 while optimizing GDP using reinforcement learning in OpenAI Gym.\n
+        • Used linear and polynomial regression to predict CO2 and GDP growth with scikit-learn.\n
+        • Found that GDP can stay positive long-term with the right CO2 policies, though at a reduced growth rate.`,
+      link: 'https://drive.google.com/file/d/1JOn780qTTXDyJ4wY_J5RLlTU8pEwgzTO/view?usp=sharing',
+    },
+    {
+      title: 'A* Path Visualization',
+      description:
+        `• Built an interactive visual of the A* pathfinding algorithm with real-time grid plotting.\n
+        • Used priority queues to optimize search performance.`,
+      link: 'https://github.com/jaime-bustos/a-star-pathfinding',
+    },
+    {
+      title: 'Malaria Detection in Cells using CNNs',
+      description:
+        `• Trained a CNN in TensorFlow to detect diseased cells using image classification.\n
+        • Applied hyperparameter tuning and validation splits on hundreds of labeled images.`,
+      link: 'https://drive.google.com/file/d/1SnISeNGu2kr1uFhVU2Z34zfrgnY2XZZr/view?usp=sharing',
+    },
+  ];
 
-  },
-
-  {
-    title: 'GDP and Carbon Emissions Reinforcement Learning',
-    description: 
-      '• Simulated specific government policies and costs to find ways to lower global CO2 levels while maintaining high long-term GDP growth using policy-based reinforcement learning in OpenAI’s Gym library.\n' +
-      '• Implemented and visualized linear and polynomial regression to predict future CO2 and GDP growth using Pandas, Matplotlib, and scikit-learn.\n' +
-      '• Discovered that projected long-term GDP growth can stay positive with the correct CO2 policies; however, the tradeoff is a slight decline in the overall growth rate from 2% to around -1%, indicating a negative growth rate in 100 years.',
-    link: 'https://drive.google.com/file/d/1JOn780qTTXDyJ4wY_J5RLlTU8pEwgzTO/view?usp=sharing',
-  },
-
-  {
-    title: 'A* Path Visualization',
-    description:
-    "• Developed an interactive visual representation of the A* pathfinding algorithm, enabling users to visually plot a start and end point on a grid and observe the algorithm's real-time pathfinding process.\n"+
-    "• Employed data structures like Priority Queues for maintaining open nodes in the pathfinding process, optimizing the algorithm's performance.",
-    link: 'https://github.com/jaime-bustos/a-star-pathfinding',
-  },
-  {
-    title: 'Malaria Disease Detection in Cells using CNNs',
-    description:
-    "• Developed a supervised learning computer vision model that detected diseased cells using Keras in TensorFlow.\n"+
-    "• CNN model was trained on over hundreds of cell images using a validation split to determine what to look for.\n" +
-    "• Employed various types of hyperparameter tuning (pooling size, Kernel size, epoch size) through hyperparameter testing.", 
-    link: 'https://drive.google.com/file/d/1SnISeNGu2kr1uFhVU2Z34zfrgnY2XZZr/view?usp=sharing',
-  },
-
-];
-
-const ProjectsPage = () => {
-  return (
-    <Flex
-      fillWidth paddingTop="l" paddingX="l"
-      direction="column" alignItems="center" flex={1}>
-      <StarBackground />
+  const ProjectsPage = () => {
+    return (
       <Flex
-        position="relative"
-        as="section" overflow="hidden"
-        fillWidth minHeight="0" maxWidth={64}
-        direction="column" alignItems="center" flex={1}>
-        
-        <Heading variant="display-strong-s" marginBottom="m">
-          Projects
-        </Heading>
+        direction="column"
+        alignItems="center"
+        paddingX="l"
+        paddingTop="xl"
+        style={{ minHeight: '100vh', position: 'relative' }}
+      >
+        <StarBackground />
 
         <Flex
-          direction="column" alignItems="center" flex={1}
+          direction="column"
+          alignItems="center"
+          style={{
+            zIndex: 1,
+            maxWidth: '960px',
+            width: '100%',
+          }}
+          gap="l"
         >
-          <Button
-            href="../"
-            suffixIcon="chevronRight"
-            variant="secondary"
-            style={{marginBottom:"10px"}}
-            >
-            Home
-          </Button>
+          <Heading variant="display-strong-s" style={{ textAlign: 'center' }}>
+            Projects
+          </Heading>
 
-          <Button
-            href="../about"
-            suffixIcon="chevronRight"
-            variant="secondary">
-            About Me
-          </Button>
-        </Flex>
-          
+          <Flex gap="m" justifyContent="center" >
+            <Button href="../" suffixIcon="chevronRight" variant="secondary">
+              Home
+            </Button>
+            <Button href="../about" suffixIcon="chevronRight" variant="secondary">
+              About Me
+            </Button>
+          </Flex>
 
-        <Grid
-          columns="repeat(1, 1fr)"
-          tabletColumns="1col"
-          mobileColumns="1col"
-          fillWidth gap="l"
-          radius="l"
-          border="neutral-medium"
-          //borderStyle="solid-1"
-          padding="l"
-          style={{ backgroundColor: 'rgba(0, 0, 0, 0)', borderRadius: '12px' }}>
-          {projects.map((project, index) => (
-            <React.Fragment key={index}>
+          <Grid
+              columns="1fr 1fr"
+              gap="l"
+              fillWidth
+
+          >
+            {projects.map((project, index) => (
               <Flex
-                direction="column" justifyContent="space-between"
+                key={index}
+                direction="column"
+                justifyContent="space-between"
                 padding="l"
                 gap="m"
-                style={{ backgroundColor: 'rgba(255, 255, 255, 1)', borderRadius: '8px' }}>
-                <Heading variant="body-strong-m" style={{color: 'black'}}>
+                style={{
+                  background: 'rgba(255, 255, 255, 0.05)',
+                  border: '1px solid rgba(255, 255, 255, 0.1)',
+                  borderRadius: '16px',
+                  backdropFilter: 'blur(6px)',
+                  transition: 'transform 0.2s ease',
+                }}
+                onMouseEnter={(e) => (e.currentTarget.style.transform = 'scale(1.01)')}
+                onMouseLeave={(e) => (e.currentTarget.style.transform = 'scale(1.0)')}
+              >
+                <Heading variant="body-strong-m" style={{ color: 'white' }}>
                   {project.title}
                 </Heading>
-                <Text 
-                  variant="body-default-s" 
-                  onBackground="neutral-weak" 
-                  style={{color: 'black', whiteSpace: 'pre-line'}}>
+                <Text
+                  variant="body-default-s"
+                  style={{ color: 'white', whiteSpace: 'pre-line' }}
+                >
                   {project.description}
                 </Text>
                 <Button
                   href={project.link}
                   suffixIcon="chevronRight"
-                  variant="secondary">
-                  {project.title === 'Check out all my projects on my GitHub!' ? 'Link to GitHub' : 'View Project'}
+                  variant="secondary"
+                >
+                  {project.title.includes('GitHub') ? 'Visit GitHub' : 'View Project'}
                 </Button>
               </Flex>
-              {index === 0 && (
-                <hr style={{ 
-                  width: '100%', 
-                  border: 'none', 
-                  height: '2px', 
-                  backgroundColor: 'rgba(255, 255, 255, 0.2)', 
-                  margin: '20px 0' 
-                }} />
-              )}
-            </React.Fragment>
-          ))}
-        </Grid>
+            ))}
+          </Grid>
+        </Flex>
       </Flex>
-    </Flex>
-  );
-};
+    );
+  };
 
-export default ProjectsPage;
+  export default ProjectsPage;

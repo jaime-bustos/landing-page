@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import { Flex, Heading, Text, Button} from '@/once-ui/components';
+import { Flex, Heading, Text, Button } from '@/once-ui/components';
 import StarBackground from '../../once-ui/components/StarBackground';
 
 const AboutMe = () => {
@@ -25,7 +25,7 @@ const AboutMe = () => {
           zIndex: 1,
           padding: '40px',
           maxWidth: '800px',
-          backgroundColor: 'white',
+          backgroundColor: "#0d0d0d",
           borderRadius: '10px',
           boxShadow: '0px 4px 15px rgba(0, 0, 0, 0.1)',
           textAlign: 'center',
@@ -45,12 +45,12 @@ const AboutMe = () => {
           variant="secondary">
           Portfolio
         </Button>
-        <img
+        {/* <img
           src="https://media.licdn.com/dms/image/v2/D5603AQGrhP2ppUZqyQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1673057401650?e=1739404800&v=beta&t=3EveEddnEv_ccmq1jelD0ji7kQe6jLr1Q3VBuK-CmIA"
           alt="Your Picture"
           style={{ width: '150px', height: '150px', borderRadius: '50%', marginBottom: '20px', alignSelf: 'center'}}
-        />
-        <Heading style={{ color: 'black' }}>⚠️ Thanks for stopping by, but this page is under construction! 👷</Heading>
+        /> */}
+        <Heading padding='l' style={{ color: 'white' }}>⚠️ Thanks for stopping by, but this page is under construction! 👷</Heading>
         {/* <Heading style={{ color: 'black', fontSizeAdjust: '0.35', padding: '20px'}}>B.S. Computer Science, Business Economics</Heading> */}
         <Flex
           direction="row"
@@ -87,21 +87,9 @@ const AboutMe = () => {
 
         </Text> */}
       </Flex>
-      <Flex
-					gap="12" 
-          style={{padding:'20px'}}>
-					<Button
-						href="https://github.com/jaime-bustos"
-						prefixIcon="github" size="s" variant="tertiary">
-						GitHub
-					</Button>
-					<Button
-						href="https://www.linkedin.com/in/jaimebustosjr/"
-						prefixIcon="linkedin" size="s" variant="tertiary">
-						LinkedIn
-					</Button>
-				</Flex>
+          
     </Flex>
+
     
     
   );
