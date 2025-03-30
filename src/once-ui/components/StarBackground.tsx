@@ -26,15 +26,35 @@ const StarBackground = () => {
       }
       starsRef.current = stars;
 
-      // Function to draw stars
       const drawStars = () => {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
+      
+        // Draw stars
         stars.forEach((star) => {
           ctx.beginPath();
           ctx.arc(star.x, star.y, star.size, 0, Math.PI * 2);
           ctx.fillStyle = 'white';
           ctx.fill();
         });
+      
+        // Draw lines between nearby stars
+        for (let i = 0; i < stars.length; i++) {
+          for (let j = i + 1; j < stars.length; j++) {
+            const dx = stars[i].x - stars[j].x;
+            const dy = stars[i].y - stars[j].y;
+            const distance = Math.sqrt(dx * dx + dy * dy);
+      
+            if (distance < 100) {
+              const opacity = 1 - distance / 100; // Fade line as distance increases
+              ctx.beginPath();
+              ctx.moveTo(stars[i].x, stars[i].y);
+              ctx.lineTo(stars[j].x, stars[j].y);
+              ctx.strokeStyle = `rgba(255, 255, 255, ${opacity * 0.5})`; // Soft white lines
+              ctx.lineWidth = 0.5;
+              ctx.stroke();
+            }
+          }
+        }
       };
 
       // Initial draw

@@ -11,9 +11,10 @@ export default function Footer() {
             paddingX="l"
             paddingY="m"
             justifyContent="space-between"
+
         >
-            <Text variant="body-default-s" onBackground="neutral-weak">
-                2025 Jaime Bustos
+            <Text variant="body-default-s" onBackground="neutral-weak" paddingRight='20'>
+                2025 jaime bustos
             </Text>
             <Flex gap="12">
                 <Button

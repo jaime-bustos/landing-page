@@ -20,39 +20,44 @@ export default function Home() {
 	const links = [
 		{
 			href: "/about",
-			title: "Feed",
-			description: "All my posts and updates.",
+			title: "feed",
+			description: "all my posts and updates",
 		},
 		{
 			href: "/projects",
-			title: "Portfolio",
-			description: "See all my projects.",
+			title: "portfolio",
+			description: "see all my projects",
 		},
 		{
 			href: "https://drive.google.com/file/d/1TDtYdWAC9h1CeYYfzFCD-0i3d0eJ36MM/view?usp=sharing",
-			title: "Resume",
-			description: "Check out my resume.",
+			title: "resume",
+			description: "check out my resume",
 		},
 	];
 
 	return (
 		<Flex
-			fillWidth paddingTop="l" paddingX="l"
-			direction="column" alignItems="center" flex={1}>
+			fillWidth
+			direction="column" alignItems="center" flex={1} justifyContent="center">
 			<StarBackground/>
 			<Flex
 				position="relative"
-				as="section" overflow="hidden"
-				fillWidth minHeight="0" maxWidth={40}
-				direction="column" alignItems="center" flex={1}	>
+				fillWidth
+				maxWidth={40}
+				direction="column" 
+				alignItems="center"	
+				justifyContent="center"
+				>
+				
 				<Flex
 					as="main"
 					direction="column" justifyContent="center"
-					padding="l" gap="l"
+					padding="m" gap="l"
 					border="neutral-medium"
 					borderStyle="solid-1"
 					radius="xl"
 					style={{ backgroundColor: "#0d0d0d" }}
+					alignItems='center'
 
 					>
 					<Flex
@@ -60,7 +65,7 @@ export default function Home() {
 						fillWidth gap="0">
 						<Flex
 							position="relative"
-							paddingTop="56" paddingX="l"
+							paddingTop="m" paddingX="l"
     						direction="column" gap="20">
 
 							
@@ -79,14 +84,17 @@ export default function Home() {
 						tabletColumns="1col"
 						mobileColumns="1col"
 						fillWidth
-						gap="xs">
+						gap="s"
+						paddingTop="s">
 						{links.map((link) => (
 							<Link
 
 								key={link.href}
 								href={link.href}>
 								<Flex
-									fillWidth padding="20" gap="1"
+									fillWidth 
+									padding="s"
+									gap="1"
 									direction="column">
 									<Flex
 										fillWidth gap="1"
@@ -108,9 +116,9 @@ export default function Home() {
 					
 					</Flex>
 
-					
+					<Footer/>
 				</Flex>
-				<Footer/>
+				
 			</Flex>
 			
 			
