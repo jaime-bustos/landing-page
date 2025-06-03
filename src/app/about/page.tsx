@@ -9,8 +9,8 @@ const FeedPage = () => {
     {
       id: 1,
       title: "Welcome to my new feed page",
-      date: "March 30, 2025",
-      excerpt: "This is the beginning of my feed section.",
+      date: "June 3, 2025",
+      excerpt: "This is the beginning of my feed section. Think of these as blog posts!",
       //link: "/posts/ai-models-from-scratch"
     },
 
@@ -42,22 +42,30 @@ const FeedPage = () => {
         }}
       >
         <Flex
-          
-          justifyContent="space-between"
-          alignItems="center"
-          padding="m"
-          direction='column'
-
-        >
-          <Heading variant="display-strong-s" style={{ color: 'white' }}>
-            feed
-          </Heading>
-          <Flex gap="s" paddingTop="16" >
-            <Button href="/projects" variant="secondary" size="s">Portfolio</Button>
-            <Button href="/" variant="secondary" size="s">Home</Button>
-          </Flex>
-        </Flex>
-      </Flex>
+                  direction="column"
+                  alignItems="center"
+                  style={{
+                    zIndex: 1,
+                    maxWidth: '960px',
+                    width: '100%',
+                  }}
+                  gap="l"
+                >
+                  <Heading variant="display-strong-s" style={{ textAlign: 'center', paddingTop:80}}>
+                    feed
+                  </Heading>
+        
+                  <Flex gap="m" justifyContent="center" >
+                    <Button href="../" suffixIcon="chevronRight" variant="secondary">
+                      home
+                    </Button>
+                    <Button href="../projects" suffixIcon="chevronRight" variant="secondary">
+                        projects
+                    </Button>
+                  </Flex>
+                </Flex>
+            </Flex>
+                  
 
       {/* Main Feed Container */}
       <Flex
@@ -83,7 +91,7 @@ const FeedPage = () => {
           }}
         >
           <Text style={{ color: '#aaa' }}>
-            If you have a dream, then the next step is to have a plan.
+            <em>"If you have a dream, then the next step is to have a plan." - Unknown</em>
           </Text>
         </Flex>
 

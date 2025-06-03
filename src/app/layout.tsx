@@ -8,11 +8,29 @@ import classNames from 'classnames';
 import { Inter } from 'next/font/google'
 import { Source_Code_Pro } from 'next/font/google';
 
+const primaryFont = Inter({
+  variable: '--font-family-body', // this matches your SCSS expectation
+  subsets: ['latin'],
+  display: 'swap',
+});
+
+const codeFont = Source_Code_Pro({
+  variable: '--font-code', // if you use --font-code in SCSS, great
+  subsets: ['latin'],
+  display: 'swap',
+});
+
 const primary = Inter({
 	variable: '--font-primary',
 	subsets: ['latin'],
 	display: 'swap',
 })
+
+const headingFont = Inter({
+  variable: '--font-family-heading',
+  subsets: ['latin'],
+  display: 'swap',
+});
 
 type FontConfig = {
     variable: string;
@@ -49,11 +67,11 @@ export default function RootLayout({
 			data-surface="filled"
 			data-transition="all"
 			className={classNames(
-				primary.variable,
-				secondary ? secondary.variable : '',
-				tertiary ? tertiary.variable : '',
-				code.variable,
-				'root')}>
+                primaryFont.variable,
+                headingFont.variable,
+                codeFont.variable,
+                'root'
+                )}>
 			<Flex
 				as="body"
 				fillWidth fillHeight margin="0" padding="0">

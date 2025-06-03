@@ -56,15 +56,15 @@
           gap="l"
         >
           <Heading variant="display-strong-s" style={{ textAlign: 'center' }}>
-            Projects
+            projects
           </Heading>
 
           <Flex gap="m" justifyContent="center" >
             <Button href="../" suffixIcon="chevronRight" variant="secondary">
-              Home
+              home
             </Button>
             <Button href="../about" suffixIcon="chevronRight" variant="secondary">
-              About Me
+              feed
             </Button>
           </Flex>
 
