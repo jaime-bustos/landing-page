@@ -1,98 +1,136 @@
 "use client";
 
-import React from 'react';
-import { Flex, Heading, Text, Button } from '@/once-ui/components';
+import React, { useState } from 'react';
+import { Flex, Heading, Text, Button, Avatar } from '@/once-ui/components';
 import StarBackground from '../../once-ui/components/StarBackground';
 
-const AboutMe = () => {
+const FeedPage = () => {
+  const [posts, setPosts] = useState([
+    {
+      id: 1,
+      title: "Welcome to my new feed page",
+      date: "March 30, 2025",
+      excerpt: "This is the beginning of my feed section.",
+      //link: "/posts/ai-models-from-scratch"
+    },
+
+  ]);
+
   return (
     <Flex
       direction="column"
-      align="center"
+      alignItems="center"
       style={{
         position: 'relative',
         minHeight: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
+        backgroundColor: 'transparent',
       }}
     >
       <StarBackground />
+
+      {/* Sticky Header */}
       <Flex
-        direction="column"
-        align="center"
+        position="sticky"
+
+        zIndex={100}
+
+        justifyContent="center"
+
+
         style={{
-          zIndex: 1,
-          padding: '40px',
-          maxWidth: '800px',
-          backgroundColor: "#0d0d0d",
-          borderRadius: '10px',
-          boxShadow: '0px 4px 15px rgba(0, 0, 0, 0.1)',
-          textAlign: 'center',
+          backdropFilter: 'blur(6px)',
         }}
       >
-        <Button
-          href="./"
-          suffixIcon="chevronRight"
-          variant="secondary"
-          style={{ marginBottom: '10px' }}
-          >
-          Home
-        </Button>
-        <Button
-          href="/projects"
-          suffixIcon="chevronRight"
-          variant="secondary">
-          Portfolio
-        </Button>
-        {/* <img
-          src="https://media.licdn.com/dms/image/v2/D5603AQGrhP2ppUZqyQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1673057401650?e=1739404800&v=beta&t=3EveEddnEv_ccmq1jelD0ji7kQe6jLr1Q3VBuK-CmIA"
-          alt="Your Picture"
-          style={{ width: '150px', height: '150px', borderRadius: '50%', marginBottom: '20px', alignSelf: 'center'}}
-        /> */}
-        <Heading padding='l' style={{ color: 'white' }}>⚠️ Thanks for stopping by, but this page is under construction! 👷</Heading>
-        {/* <Heading style={{ color: 'black', fontSizeAdjust: '0.35', padding: '20px'}}>B.S. Computer Science, Business Economics</Heading> */}
+        <Flex
+          
+          justifyContent="space-between"
+          alignItems="center"
+          padding="m"
+          direction='column'
+
+        >
+          <Heading variant="display-strong-s" style={{ color: 'white' }}>
+            feed
+          </Heading>
+          <Flex gap="s" paddingTop="16" >
+            <Button href="/projects" variant="secondary" size="s">Portfolio</Button>
+            <Button href="/" variant="secondary" size="s">Home</Button>
+          </Flex>
+        </Flex>
+      </Flex>
+
+      {/* Main Feed Container */}
+      <Flex
+        direction="column"
+        style={{
+          zIndex: 1,
+          width: '100%',
+          maxWidth: '640px',
+          padding: '16px',
+          
+        }}
+      >
+
+        {/* Composer Placeholder */}
         <Flex
           direction="row"
+          gap="m"
           style={{
-            width: '90%',
-            justifyContent: 'space-between',
-            alignSelf: 'center',
-            padding: '10px',
-            fontSize: '15px'
+            padding: '16px 0',
+            borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
+            backdropFilter: 'blur(6px)',
+
           }}
         >
-        
-
-          {/* <Text style={{ textAlign: 'left', color: 'black', paddingRight: '20px'}}>
-            <b>Languages</b>: Python, R, C++, C, Java<br />
-            <br /><b>Tools</b>: Git, Pandas, Numpy, Keras, Seaborn, Matplotlib, SaTScan, Jupyter, scikit-learn, STATA, Microsoft Office
+          <Text style={{ color: '#aaa' }}>
+            If you have a dream, then the next step is to have a plan.
           </Text>
-          <Text style={{ textAlign: 'left', color: 'black' }}>
-            <b>Interests</b>: Astronomy, Astrophysics, AI Development, AI Engineering, AI Research, Computational Engineering<br />
-            <br /><b>Skills</b>: ML Models, DNN Models, Econometric Data Analysis, Web Scraping, Exploraratory Data Analysis
-          </Text> */}
         </Flex>
-        
-        {/* <Text style={{ color: 'black', marginTop: '20px'}}>
-          I'm currently in my last year at Wofford College studying computer science and business economics. <br />
-          <br />
-          I aim to be ambitious in all my work. I see challenges as opportunities and ways to grow. No matter what kind of project I'm working on,
-            I will always try to get it complete. This contributes to my mindset of being a lifelong learner. I always seek out new information,
-            and when I do learn something new, I am  excited to share it or put it to practical use.<br />
-          <br />
-          It excites me to be on the forefront of AI engineering developing new technologies for humanity's future. 
-            I believe in making a positive impact in my job. With AI engineering, I believe this is one of the best ways I can contribute
-            to this goal. <br />
 
-        </Text> */}
+        {/* Posts */}
+        {posts.map((post) => (
+          <Flex
+            key={post.id}
+            direction="row"
+            gap="m"
+            paddingY="m"
+            style={{
+              borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
+              transition: 'background-color 0.2s',
+              backdropFilter: 'blur(6px)',
+
+            }} 
+          >
+
+            <Flex direction="column" gap="xs" flex={1}>
+              <Flex justifyContent="space-between" alignItems="center">
+                <Text variant="body-strong-m" style={{ color: 'white' }}>
+                  Jaime Bustos
+                </Text>
+                <Text variant="body-default-s" style={{ color: '#888' }}>
+                  {post.date}
+                </Text>
+              </Flex>
+
+              <Text variant="body-default-s" style={{ color: '#ccc' }}>
+                {post.excerpt}
+              </Text>
+
+              {/* <Button
+                href={post.link}
+                suffixIcon="chevronRight"
+                variant="tertiary"
+                size="s"
+                style={{ alignSelf: 'flex-start', marginTop: '4px' }}
+              >
+                Read more
+              </Button> */}
+            </Flex>
+          </Flex>
+        ))}
       </Flex>
-          
     </Flex>
-
-    
-    
   );
 };
 
-export default AboutMe;
+export default FeedPage;

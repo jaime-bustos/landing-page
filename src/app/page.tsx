@@ -75,7 +75,7 @@ export default function Home() {
 							</Heading>
 							<Heading
 								variant="display-strong-s" style={{ fontSize: "15px", lineHeight: '1.5', textAlign: 'left' }}>
-								data analyst.<br/>developer.<br/>ML engineer.<br/>futurist.
+								AI engineer.<br/>content creator.<br/>futurist.
 							</Heading>
 						</Flex>
 
